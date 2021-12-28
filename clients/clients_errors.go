@@ -2,6 +2,7 @@ package clients
 
 import "fmt"
 
+// ClientError let us know which kind of error exist , we can use errors.As or errors.Is
 type ClientError struct {
 	ClientName string
 	Cause      error

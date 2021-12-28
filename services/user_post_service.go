@@ -46,7 +46,7 @@ func (u UserService) GetUserPosts(id int) (UserServiceResponse, error) {
 		defer wg.Done()
 		userData, err = u.UserClient.GetUser(id)
 		if err != nil {
-			log.Println("cannot fetch user client information")
+			log.Printf("cannot fetch user client information %s" , err.Error())
 		}
 	}()
 
@@ -55,7 +55,7 @@ func (u UserService) GetUserPosts(id int) (UserServiceResponse, error) {
 		defer wg.Done()
 		postData, err = u.PostClient.GetPostsForUser(id)
 		if err != nil {
-			log.Println("cannot fetch posts client information")
+			log.Printf("cannot fetch posts client information %s", err.Error())
 		}
 	}()
 
