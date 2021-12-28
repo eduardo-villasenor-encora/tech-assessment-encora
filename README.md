@@ -1,4 +1,4 @@
-# Tech assessment for transcarent
+# Tech assessment
 
 In order to run this project you need go 1.14 or newer
 
